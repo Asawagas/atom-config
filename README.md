@@ -1,2 +1,2 @@
-#atom-config
+# atom-config
 My configuration files for atom.
