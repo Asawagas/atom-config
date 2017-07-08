@@ -1,0 +1,99 @@
+# Your keymap
+#
+# You can find more information about keymaps in these guides:
+# * http://flight-manual.atom.io/using-atom/sections/basic-customization/#_customizing_keybindings
+# * http://flight-manual.atom.io/behind-atom/sections/keymaps-in-depth/
+#
+# If you're having trouble with your keybindings not working, try the
+# Keybinding Resolver: `Cmd+.` on macOS and `Ctrl+.` on other platforms. See the
+# Debugging Guide for more information:
+# * http://flight-manual.atom.io/hacking-atom/sections/debugging/#check-the-keybindings
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+
+'atom-workspace atom-text-editor':
+  'alt-ctrl-k': 'custom:move-up4'
+  'alt-ctrl-j': 'custom:move-down4'
+  'alt-j': 'core:move-down'
+  'alt-k': 'core:move-up'
+  'alt-l': 'core:move-right'
+  'alt-h': 'core:move-left'
+  'alt-u': 'editor:move-to-beginning-of-word'
+  'alt-i': 'editor:move-to-end-of-word'
+  'alt-,': 'editor:move-to-first-character-of-line'
+  'alt-o': 'editor:move-to-end-of-line'
+  'ctrl-d': 'core:page-up'
+  'ctrl-v': 'core:page-down'
+  'alt-cmd-j': 'core:select-down'
+  'alt-cmd-k': 'core:select-up'
+  'alt-cmd-l': 'core:select-right'
+  'alt-cmd-h': 'core:select-left'
+  'alt-cmd-u': 'editor:select-to-beginning-of-word'
+  'alt-cmd-i': 'editor:select-to-end-of-word'
+  'alt-cmd-,': 'editor:select-to-first-character-of-line'
+  'alt-cmd-o': 'editor:select-to-end-of-line'
+  'cmd-ctrl-d': 'core:select-page-up'
+  'cmd-ctrl-v': 'core:select-page-down'
+  'alt-m': 'editor:select-word'
+  'alt-cmd-ctrl-j': 'editor:add-selection-below'
+  'ctrl-alt-cmd-k': 'editor:add-selection-above'
+
+  'alt-d': 'core:backspace'
+  'alt-f': 'core:delete'
+  'alt-w': 'editor:delete-to-beginning-of-word'
+  'alt-e': 'editor:delete-to-end-of-word'
+  'alt-.': 'editor:delete-to-end-of-line'
+  'alt-y': 'editor:delete-to-beginning-of-line'
+  'ctrl-i': 'editor:indent'
+  'alt-:': 'core:close'
+  'ctrl-b': 'go-to-line:toggle'
+  'alt-t': 'editor:newline-above'
+
+  'ctrl-e': 'fuzzy-finder:toggle-file-finder'
+  'ctrl-E': 'recent-files-fuzzy-finder:toggle-finder'
+  'ctrl-s': 'fuzzy-finder:toggle-buffer-finder'
+  'ctrl-n': 'find-and-replace:show-replace'
+  'ctrl-cmd-e': 'find-and-replace:toggle-regex-option'
+  'ctrl-cmd-s': 'find-and-replace:toggle-case-option'
+  'alt-x': 'command-palette:toggle'
+
+  'alt-g alt-o': 'pane:reopen-closed-item'
+  'ctrl-k': 'window:focus-next-pane'
+  'alt-2': 'pane:split-down-and-copy-active-item'
+  'alt-3': 'pane:split-right-and-copy-active-item'
+  'alt-4': 'pane:close'
+  'alt-1': 'pane:close-other-item'
+  'alt-shift-i': 'pane:show-next-item'
+  'alt-shift-u': 'pane:show-previous-item'
+  'alt-<': 'core:move-to-top'
+  'alt->': 'core:move-to-bottom'
+
+  'alt-g alt-u': 'tree-view:toggle'
+
+  ##########
+  'ctrl-p': 'clipboard-plus:toggle'
+  'ctrl-t': 'cursor-history:prev-within-editor'
+  'ctrl-alt-t': 'cursor-history:next-within-editor'
+  'ctrl-w': 'narrow:scan'
+  'alt-g alt-e': 'narrow:reopen'
+  'alt-g alt-.': 'advanced-open-file:toggle'
+
+'.advanced-open-file atom-text-editor':
+  'tab': 'advanced-open-file:autocomplete'
+  'alt-k': 'advanced-open-file:move-cursor-up'
+  'alt-j': 'advanced-open-file:move-cursor-down'
+  'alt-<': 'advanced-open-file:move-cursor-top'
+  'alt->': 'advanced-open-file:move-cursor-bottom'
+# When workspace has narrow-editor
+'atom-workspace.has-narrow atom-text-editor.vim-mode-plus.normal-mode':
+  # 'cmd-f': 'narrow:focus' # focus to narrow-editor
+  # 'cmd-i': 'narrow:focus-prompt' # focus to prompt of narrow-editor
+
+  # Following three command have ctrl- prefixed by default to avoid conflicts.
+  # But I don' care conflict, prefer more accessible keymap.
+  'alt-p': 'narrow:previous-query-history'
+  'alt-n': 'narrow:next-query-history'
+  # 'cmd-e': 'narrow:query-current-word'
